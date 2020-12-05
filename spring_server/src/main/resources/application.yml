@@ -1,0 +1,21 @@
+server:
+  port: 8761
+
+#主机名
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false  #是否需要从eureka上抓取路径
+    fetch-registry: false #是否需要将自己的路径注册到eureka上
+
+
+
+
+#Eureka服务端地址
+client:
+  service-url:
+    defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+
+
+
